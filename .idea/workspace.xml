@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ddfe96f-adb6-4e0c-b2ef-9131854a7341" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Implementation/Implementation-1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Implementation_Practice/Implementation-2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Implementation/Implementation-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Implementation_Practice/Implementation-1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +25,11 @@
   <component name="ProjectId" id="1iPLqqFiGByAwmbPOEwA3ZHfoKu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Implementation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Implementation_Practice" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\Algorithm\Implementation_Practice" />
       <recent name="C:\Users\user\PycharmProjects\Algorithm\Implementation" />
       <recent name="C:\Users\user\PycharmProjects\Algorithm\Greedy_Practice" />
       <recent name="C:\Users\user\PycharmProjects\Algorithm\Greedy" />
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606630903125</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update files">
+      <created>1606642533011</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606642533011</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
