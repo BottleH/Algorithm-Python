@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ddfe96f-adb6-4e0c-b2ef-9131854a7341" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Implementation_Practice/Implementation-4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DFS_BFS_Practice/DFS_BFS-1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DFS_BFS_Practice/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +51,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Implementation-4">
-    <configuration name="Greedy-4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.DFS_BFS-1">
+    <configuration name="DFS_BFS-1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algorithms" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -59,11 +60,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Greedy_Practice" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DFS_BFS_Practice" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Greedy_Practice/Greedy-4.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DFS_BFS_Practice/DFS_BFS-1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -158,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DFS_BFS-1" />
         <item itemvalue="Python.Implementation-4" />
         <item itemvalue="Python.Implementation-3" />
         <item itemvalue="Python.Implementation-1" />
         <item itemvalue="Python.Greedy-5" />
-        <item itemvalue="Python.Greedy-4" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606828537400</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update files">
+      <created>1606991909552</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606991909552</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
