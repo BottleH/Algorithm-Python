@@ -17,6 +17,6 @@ def solution(n, m):
     if gcd == 1:
         lcm = n * m
     else:
-        lcm = n * (n // gcd) * (m // gcd)
+        lcm = gcd * (n // gcd) * (m // gcd)
 
     return [gcd, lcm]
