@@ -18,3 +18,4 @@ def solution(brown, yellow):
     y = (brown + yellow) // x
 
     return [max(x, y), min(x, y)]
+
