@@ -38,9 +38,13 @@ def virus(a, b):
 
 
 for j in range(s):
-    for k in range(n):
-        for c in range(n):
-            virus(k, c)
+    temp = 1
+    for z in range(1, k + 1):
+        for d in range(n):
+            for e in range(n):
+                if z == temp:
+                    virus(d, e)
+        temp += 1
 
 print(data[x - 1][y - 1])
 
