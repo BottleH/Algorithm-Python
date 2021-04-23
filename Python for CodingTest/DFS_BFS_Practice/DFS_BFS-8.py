@@ -15,38 +15,79 @@ NxN 크기의 시험관이 있다. 시험관은 1x1 크기의 칸으로 나누�
 S초 뒤에 (X,Y)에 존재하는 바이러스의 종류를 출력한다. 만약 S초 뒤에 해당 위치에 바이러스가 존재하지 않는다면, 0을 출력한다.
 """
 
+# 첫번째 풀이
+# n, k = map(int, input().split())
+# data = []
+#
+# for _ in range(n):
+#     data.append(list(map(int, input().split())))
+#
+# s, x, y = map(int, input().split())
+#
+# dx = [1, 0, -1, 0]
+# dy = [0, 1, 0, -1]
+#
+#
+# # 바이러스 이동
+# def virus(a, b):
+#     for i in range(4):
+#         nx = a + dx[i]
+#         ny = b + dy[i]
+#         if 0 <= nx < n and 0 <= ny < n:
+#             if data[nx][ny] == 0:
+#                 data[nx][ny] = data[a][b]
+#
+#
+# for j in range(s):
+#     for z in range(1, k + 1):
+#         for d in range(n):
+#             for e in range(n):
+#                 if z == data[d][e]:
+#                     virus(d, e)
+# print(data[x - 1][y - 1])
+
+# 두번째 풀이
+from collections import deque
+
 n, k = map(int, input().split())
-data = []
 
-for _ in range(n):
-    data.append(list(map(int, input().split())))
+graph = []  # 전체 보드 정보를 담는 리스트
+data = []  # 바이러스에 대한 정보를 담는 리스트
 
-s, x, y = map(int, input().split())
+for i in range(n):
+    # 보드 정보를 한 줄 단위로 입력
+    graph.append(list(map(int, input().split())))
+    for j in range(n):
+        # 해당 위치에 바이러스가 존재하는 경우
+        if graph[i][j] != 0:
+            # (바이러스 종류, 시간, 위치 X, 위치 Y) 삽입
+            data.append((graph[i][j], 0, i, j))
 
+# 정렬 이후에 큐로 옮기기(낮은 번호의 바이러스가 먼저 증식하므로)
+data.sort()
+q = deque(data)
+
+target_s, target_x, target_y = map(int, input().split())
+
+# 바이러스가 퍼져나갈 수 있는 4가지 위치
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
-
-# 바이러스 이동
-def virus(a, b):
+# 너비 우선 탐색(BFS) 진행
+while q:
+    virus, s, x, y = q.popleft()
+    # 정확히 s초가 지나거나, 큐가 빌 때까지 반복
+    if s == target_s:
+        break
+    # 현재 노드에서 주변 4가지 위치를 각각 확인
     for i in range(4):
-        nx = a + dx[i]
-        ny = b + dy[i]
+        nx = x + dx[i]
+        ny = y + dy[i]
+        # 해당 위치로 이동할 수 있는 경우
         if 0 <= nx < n and 0 <= ny < n:
-            if data[nx][ny] == 0:
-                data[nx][ny] = data[a][b]
+            # 아직 방문하지 않은 위치라면, 그 위치에 바이러스 넣기
+            if graph[nx][ny] == 0:
+                graph[nx][ny] = virus
+                q.append((virus, s + 1, nx, ny))
 
-
-for j in range(s):
-    for z in range(1, k + 1):
-        for d in range(n):
-            for e in range(n):
-                if z == data[d][e]:
-                    virus(d, e)
-print(data[x - 1][y - 1])
-
-# 3 3
-# 1 0 2
-# 0 0 0
-# 3 0 0
-# 2 3 2
+print(graph[target_x - 1][target_y - 1])
