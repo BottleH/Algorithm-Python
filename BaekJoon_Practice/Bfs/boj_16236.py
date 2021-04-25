@@ -29,7 +29,7 @@ dys = [0, -1, 1, 0]
 
 
 def bfs(x, y):
-    q, visited = deque([(x, y)]), set([(x, y)])
+    q, visited = deque([(x, y)]), {(x, y)}
     time = 0
     shark = 2  # 현재 아기 상어의 크기다.
     eat = 0  # 현재 크기에서, 지금까지 먹은 물고기 수다.
@@ -56,7 +56,7 @@ def bfs(x, y):
 
                     # 먹고 난 뒤, 현재 위치를 기준으로 다시 근처를 탐색해야 하기 때문에,
                 # BFS queue 와 visited 를 초기화 해준다.
-                q, visited = deque(), set([(x, y)])
+                q, visited = deque(), {(x, y)}
                 eat_flag = True
 
                 # 먹었을 때의 시간을 저장해둔다.
@@ -64,7 +64,7 @@ def bfs(x, y):
 
             for dx, dy in zip(dxs, dys):
                 nx, ny = x + dx, y + dy
-                if nx >= 0 and nx < n and ny >= 0 and ny < n and (nx, ny) not in visited:
+                if 0 <= nx < n and 0 <= ny < n and (nx, ny) not in visited:
                     if board[nx][ny] <= shark:
                         q.append((nx, ny))
                         visited.add((nx, ny))
@@ -91,5 +91,3 @@ for i in range(n):
 
 # 2. 시작점에서 BFS 진행
 print(bfs(s_x, s_y))
-
-
