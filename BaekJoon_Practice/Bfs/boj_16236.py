@@ -54,7 +54,7 @@ def bfs(x, y):
                     shark += 1
                     eat = 0
 
-                    # 먹고 난 뒤, 현재 위치를 기준으로 다시 근처를 탐색해야 하기 때문에,
+                # 먹고 난 뒤, 현재 위치를 기준으로 다시 근처를 탐색해야 하기 때문에,
                 # BFS queue 와 visited 를 초기화 해준다.
                 q, visited = deque(), {(x, y)}
                 eat_flag = True
